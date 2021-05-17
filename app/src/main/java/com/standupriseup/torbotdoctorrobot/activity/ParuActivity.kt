@@ -2,6 +2,7 @@ package com.standupriseup.torbotdoctorrobot.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatDelegate
 import com.standupriseup.torbotdoctorrobot.R
 import com.standupriseup.torbotdoctorrobot.databinding.ActivityParuBinding
 
@@ -16,6 +17,7 @@ class ParuActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
         binding = ActivityParuBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
