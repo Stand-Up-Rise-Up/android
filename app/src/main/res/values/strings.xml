@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Torbot - Doctor Robot</string>
+    <string name="torbot">Torbot</string>
+    <string name="welcome">Selamat datang</string>
+    <string name="next">Lanjutkan</string>
+    <string name="welcomedesc">Sistem prediksi penyakit dari data yang diinputkan</string>
+    <string name="lungdisease">Penyakit paru-paru</string>
+</resources>
