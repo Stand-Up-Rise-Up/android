@@ -7,10 +7,10 @@
     android:orientation="horizontal"
     android:padding="16dp">
 
-    <de.hdodenhof.circleimageview.CircleImageView
+    <ImageView
         android:id="@+id/id_icon_rv"
-        android:layout_width="55dp"
-        android:layout_height="55dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="16dp"
@@ -21,7 +21,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:textSize="16sp"
+        android:textSize="14sp"
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/id_icon_rv"
         tools:ignore="MissingConstraints"
@@ -36,9 +36,18 @@
         android:layout_marginTop="4dp"
         android:ellipsize="end"
         android:maxLines="2"
+        android:textSize="10sp"
         app:layout_constraintStart_toEndOf="@+id/id_icon_rv"
         app:layout_constraintTop_toBottomOf="@+id/id_name_rv"
         tools:ignore="MissingConstraints"
         tools:text="@string/app_name" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:background="@color/blue_100"
+        app:layout_constraintTop_toBottomOf="@+id/id_icon_rv"
+        android:layout_marginTop="10dp"
+        tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

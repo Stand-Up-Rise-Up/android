@@ -1,9 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activity.ParuActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginTop="40dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lungdisease"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:id="@+id/nameDisease"/>
+
+        <TextView
+            android:layout_marginTop="12dp"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:text="@string/lungdisease"
+            android:textSize="10sp"
+            android:textAlignment="center"
+            android:id="@+id/descDisease"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="260dp"
+            android:layout_height="260dp"
+            android:layout_gravity="center"
+            android:background="@drawable/image_upload"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/blue_100"
+            android:textColor="@color/white_200"
+            android:text="@string/detect"
+            android:layout_marginLeft="14dp"
+            android:layout_marginRight="14dp"
+            android:textAllCaps="false"
+            android:textSize="14dp"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="14dp"
+            android:id="@+id/detectButton"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

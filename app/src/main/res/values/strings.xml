@@ -3,6 +3,7 @@
     <string name="torbot">Torbot</string>
     <string name="welcome">Selamat datang</string>
     <string name="next">Lanjutkan</string>
+    <string name="detect">Proses gambar</string>
     <string name="welcomedesc">Sistem prediksi penyakit dari data yang diinputkan</string>
     <string name="lungdisease">Penyakit paru-paru</string>
 </resources>

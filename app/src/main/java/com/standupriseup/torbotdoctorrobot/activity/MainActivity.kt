@@ -1,5 +1,6 @@
 package com.standupriseup.torbotdoctorrobot.activity
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -7,7 +8,7 @@ import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.standupriseup.torbotdoctorrobot.R
-import com.standupriseup.torbotdoctorrobot.adapter.DiseaseListAdapter
+import com.standupriseup.torbotdoctorrobot.adapter.diseaseListAdapter
 import com.standupriseup.torbotdoctorrobot.data.Disease
 import com.standupriseup.torbotdoctorrobot.data.DiseaseList
 import com.standupriseup.torbotdoctorrobot.databinding.ActivityMainBinding
@@ -16,14 +17,12 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
     private var list: ArrayList<Disease> = arrayListOf()
-    private lateinit var rvDisease: RecyclerView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        binding?.progressBar?.visibility = View.VISIBLE
-
+        binding?.progressbar?.visibility = View.VISIBLE
         binding?.diseasesList?.setHasFixedSize(true)
         list.addAll(DiseaseList.listData)
         showRecyclerList()
@@ -31,12 +30,22 @@ class MainActivity : AppCompatActivity() {
 
     private fun showRecyclerList() {
         binding?.diseasesList?.layoutManager = LinearLayoutManager(this)
-        val diseaseListAdapter = DiseaseListAdapter(list)
+        val diseaseListAdapter = diseaseListAdapter(list)
         binding?.diseasesList?.adapter = diseaseListAdapter
 
-        diseaseListAdapter.setOnItemClickCallback(object : DiseaseListAdapter.OnItemClickCallback {
-            override fun onItemClicked(data: Disease) {}
+        diseaseListAdapter.setOnItemClickCallback(object : diseaseListAdapter.OnItemClickCallback {
+            override fun onItemClicked(data: Disease) {
+                showSelectedDisease(data)
+            }
         })
-        binding?.progressBar?.visibility = View.INVISIBLE
+
+        binding?.progressbar?.visibility = View.INVISIBLE
+    }
+
+    private fun showSelectedDisease(data: Disease) {
+        val moveToDetail = Intent(this, ParuActivity::class.java)
+        moveToDetail.putExtra(ParuActivity.NAME, data.name)
+        moveToDetail.putExtra(ParuActivity.DESC, data.desc)
+        startActivity(moveToDetail)
     }
 }

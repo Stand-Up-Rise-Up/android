@@ -12,7 +12,7 @@ import com.bumptech.glide.request.RequestOptions
 import com.standupriseup.torbotdoctorrobot.R
 import com.standupriseup.torbotdoctorrobot.data.Disease
 
-class DiseaseListAdapter(private val listDisease: ArrayList<Disease>) : RecyclerView.Adapter<DiseaseListAdapter.ListViewHolder>() {
+class diseaseListAdapter(private val listDisease: ArrayList<Disease>) : RecyclerView.Adapter<diseaseListAdapter.ListViewHolder>() {
 
     private lateinit var onItemClickCallback: OnItemClickCallback
 
@@ -25,7 +25,7 @@ class DiseaseListAdapter(private val listDisease: ArrayList<Disease>) : Recycler
         val disease = listDisease[position]
         Glide.with(holder.itemView.context)
                 .load(disease.icon)
-                .apply(RequestOptions().override(55, 55))
+                .apply(RequestOptions().override(60, 60))
                 .into(holder.icon)
         holder.name.text = disease.name
         holder.shortDesc.text = disease.shortDesc
