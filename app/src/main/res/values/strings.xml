@@ -4,6 +4,11 @@
     <string name="welcome">Selamat datang</string>
     <string name="next">Lanjutkan</string>
     <string name="detect">Proses gambar</string>
+    <string name="reload">Proses gambar baru</string>
     <string name="welcomedesc">Sistem prediksi penyakit dari data yang diinputkan</string>
     <string name="lungdisease">Penyakit paru-paru</string>
+    <string name="percentDummy">70%</string>
+    <string name="percent">%</string>
+    <string name="failedToDetect">Gambar tidak terdeksi, hasil terlalu rendah</string>
+    <string name="failedToDetectPercent"> </string>
 </resources>
